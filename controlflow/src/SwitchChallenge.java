@@ -1,4 +1,4 @@
-public class TraditionalSwitchChallenge {
+public class SwitchChallenge {
     public static void main(String[] args) {
         switchUseTraditional('o');
         switchUseEnhanced('o');
