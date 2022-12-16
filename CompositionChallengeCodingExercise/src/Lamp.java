@@ -20,7 +20,8 @@ public class Lamp {
     public int getGlobRating() {
         return globRating;
     }
-    private void turnOn(){
-        System.out.println((isBattery()) ? "Lamp is on" : "");
+    public void turnOn(){
+        //System.out.println((isBattery()) ? "Lamp is on" : "");
+        System.out.println("Lamp -> Turning on");
     }
 }
