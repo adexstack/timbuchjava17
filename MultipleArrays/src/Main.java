@@ -4,7 +4,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        int[][] array2 = new int[3][4];
+        int[][] array2 = new int[4][4];
         System.out.println(Arrays.toString(array2));
         System.out.println("array2.length = " + array2.length);
 
@@ -21,6 +21,7 @@ public class Main {
 //            System.out.println();
         }
 
+        // using foreach
 //        for (var outer : array2) {
 //            for (var element : outer) {
 //                System.out.print(element + " ");
@@ -30,6 +31,7 @@ public class Main {
 
         System.out.println(Arrays.deepToString(array2));
 
+        // setting the 2nd nested array values
         array2[1] = new int[] {10, 20, 30};
         System.out.println(Arrays.deepToString(array2));
 
@@ -46,14 +48,16 @@ public class Main {
         };
         System.out.println(Arrays.deepToString(anyArray));
 
-//        anyArray[2] = new int[2][2][2];
-        anyArray[2] = "Hello";
+        anyArray[2] = new int[2][2][2];
+
+        // anyArray[2] = "Hello"; This will cause type cast exception.
+        // Casting string to an array of object on line 60
         System.out.println(Arrays.deepToString(anyArray));
 
         for (Object element : anyArray) {
             System.out.println("Element type = " + element.getClass().getSimpleName());
             System.out.println("Element toString() = " + element);
-            //System.out.println(Arrays.deepToString((Object[]) element));
+            System.out.println(Arrays.deepToString((Object[]) element));
         }
     }
 }
