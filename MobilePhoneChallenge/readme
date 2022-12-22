@@ -1,0 +1,3 @@
+my implementation is simpler, more optimized and less error prone to Tim's
+I benefit from using Record (JDK16) as opposed to creating a class as Tims's
+JDK11 MobilePhoneChallengeTim implementation.
