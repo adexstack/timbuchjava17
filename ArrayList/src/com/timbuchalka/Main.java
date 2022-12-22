@@ -105,27 +105,4 @@ public class Main {
         System.out.println("my ArrayList to Array is "+ Arrays.toString(myArray));
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
