@@ -19,7 +19,7 @@ public class Demo {
         printList(placesToVisit);
 
         addInOrder(placesToVisit, "Alice Springs");
-        addInOrder(placesToVisit, "Darwin");
+        addInOrder(placesToVisit, "Darwin"); //should not be added at it already included
         printList(placesToVisit);
         visit(placesToVisit);
     }
@@ -36,22 +36,21 @@ public class Demo {
         ListIterator<String> stringListIterator = linkedList.listIterator();
 
         while(stringListIterator.hasNext()) {
+            // comparing included destination to next destination
             int comparison = stringListIterator.next().compareTo(newCity);
             if(comparison == 0) {
-                // equal, do not add
+                // equals, do not add
                 System.out.println(newCity + " is already included as a destination");
                 return false;
             } else if(comparison > 0) {
                 // new City should appear before this one
                 // Brisbane  -> Adelaide
+                // Because we already using .next(), so we have to move back 1 record and insert Adelaide (Ade -> Brisb)
                 stringListIterator.previous();
                 stringListIterator.add(newCity);
                 return true;
-            } else {
-                // move on next city
-            }
+            }  // move on to next city (.next() already insert this for us)
         }
-
         stringListIterator.add(newCity);
         return true;
     }
