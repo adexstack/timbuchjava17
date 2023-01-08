@@ -1,0 +1,6 @@
+Build this module : File -> project Structure -> Artefacts -> + Jar and complete accepting defaults
+Then; Build -> Build Artifacts -> Build
+
+Use in SeriesTest project: File -> project Structure -> Libraries -> + browse to the artefacts and add.
+Should now be in the dependencies (external Libraries) and can create a main class to test the methods in the artifact.
+C:\Users\saade\IdeaProjects\TimBuchJava17\PackageChallenge\out\artifacts\PackageChallenge_jar\PackageChallenge.jar
