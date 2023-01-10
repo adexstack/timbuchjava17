@@ -14,6 +14,7 @@ public class Main {
         Employee snow = new Employee("Snow White", 22);
         Employee red = new Employee("Red RidingHood", 35);
         Employee charming = new Employee("Prince Charming", 31);
+        Employee lasty = new Employee("Last/Doe/Fam/Seg/Jeg.txt", 30);
 
         List<Employee> employees = new ArrayList<>();
         employees.add(john);
@@ -22,13 +23,16 @@ public class Main {
         employees.add(snow);
         employees.add(red);
         employees.add(charming);
+        employees.add(lasty);
 
 
         // creating upperCase and firstName , then chaining them together
-        Function<Employee, String> upperCase = employee -> employee.getName().toUpperCase();
-        Function<String, String> firstName = name -> name.substring(0, name.indexOf(' '));
+        Function<Employee, String> upperCase = employee -> employee.getName().toUpperCase();// converting to uppercase
+        Function<String, String> firstName = name -> name.substring(0, name.indexOf(' ')); // getting  first name
+        //Function<String, String> firstName = name -> name.substring((name.lastIndexOf("/") +1));// getting  last "/"
         Function chainedFunction = upperCase.andThen(firstName);
         System.out.println(chainedFunction.apply(employees.get(0)));
+        System.out.println("===============================");
 
 
         BiFunction<String, Employee, String> concatAge = (String name, Employee employee) -> {
